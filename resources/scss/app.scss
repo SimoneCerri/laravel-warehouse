@@ -1,1 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+main {
+    background-image: url('/public/img/warehouse_background.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .my_text_for_bg {
+        color: black;
+
+        p,
+        h1 {
+            background-color: palegoldenrod;
+            border-radius: 20px;
+            padding: 0.5em;
+        }
+    }
+}
