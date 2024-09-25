@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Payment extends Model
 {
     use HasFactory;
-    protected $fillable = ['payment:Date', 'amount', 'payment_method', 'order_id'];
+    protected $fillable = ['payment_date', 'amount', 'payment_method', 'order_id'];
 
     /**
      * Get the order that owns the payment
