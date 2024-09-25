@@ -31,4 +31,14 @@ class Order extends Model
     {
         return $this->hasOne(Invoice::class,);
     }
+
+    /**
+     * Get the payment associated with the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function payment(): HasOne
+    {
+        return $this->hasOne(Payment::class,);
+    }
 }
