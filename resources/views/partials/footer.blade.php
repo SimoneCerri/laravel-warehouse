@@ -1,6 +1,6 @@
 <footer>
-    <section class="bg-white border-top border-black">
-        <div class="container-fluid mt-5">
+    <section class="">
+        <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-4">
                     <hr>
@@ -35,7 +35,7 @@
                     <span>
                         Copyright &copy; 2024 Simone Cerri.
                     </span>
-                    <img width="150" src="{{ Vite::asset('resources/img/logosmall.jpg') }}">
+                    <img width="150" src="{{ Vite::asset('public/img/logo.jpg') }}">
                 </div>
             </div>
         </div>
