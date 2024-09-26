@@ -38,7 +38,7 @@
                             Here comes the Jr. Web Developer who builds you a management system ad hoc for your company.
                         </p>
                         <a href="https://github.com/SimoneCerri" class="btn btn-primary btn-lg mt-5" type="button"
-                            target="_blank">GitHub</a>
+                            target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
