@@ -18,7 +18,7 @@
 
 <body>
     <div id="app">
-        <main class="bg-light">
+        <main class="">
             @yield('content')
         </main>
     </div>

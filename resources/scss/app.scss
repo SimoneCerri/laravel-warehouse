@@ -1,11 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 
-
-main {
+body {
     background-image: url('/public/img/warehouse_background.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none !important;
+}
+
+main {
+    background: transparent;
 
     .my_text_for_bg {
         color: black;
@@ -29,6 +38,7 @@ main {
 }
 
 footer {
+
     img {
         box-shadow: 0 4px 4px rgba(0, 0, 0, .1),
             0 1px 6px rgba(0, 0, 0, .05),

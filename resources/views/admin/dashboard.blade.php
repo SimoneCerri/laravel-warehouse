@@ -1,23 +1,21 @@
 @extends('layouts.admin')
 
 @section('content')
-    {{-- <header>
-        <div class="container-fluid bg-dark py-3 text-danger shadow">
+    @include('partials.header')
+    <div class="container py-5">
+        <div class="container-fluid bg-dark py-3 text-danger shadow rounded-top">
             <div class="container d-flex align-items-center justify-content-between">
                 <h1>
                     <strong>
                         Dashboard
                     </strong>
                 </h1>
-                <a class="btn btn-danger text-dark" href="{{ route('admin.projects.index') }}">Portfolio</a>
+                <a class="btn btn-danger text-dark" href="{{ route('admin.dashboard') }}">Inventory</a>
             </div>
         </div>
-    </header> --}}
-    @include('partials.header')
-    <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="card">
+                <div class="card rounded-0 rounded-bottom">
                     <div class="card-header">{{ __('User Dashboard') }}</div>
 
                     <div class="card-body">
