@@ -13,7 +13,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        return view('admin.inventories.index');
+        return view('admin.inventories.index', ['inventories' => Inventory::orderByDesc('id')->paginate(5)]);
     }
 
     /**
@@ -37,7 +37,7 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        //
+        return view('admin.inventories.show', compact('inventory'));
     }
 
     /**

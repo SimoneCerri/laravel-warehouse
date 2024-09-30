@@ -10,7 +10,7 @@
                         Dashboard
                     </strong>
                 </h1>
-                <a class="btn btn-danger text-dark" href="{{ route('admin.dashboard') }}">Inventory</a>
+                <a class="btn btn-danger text-dark" href="{{ route('admin.inventories.index') }}">Inventory</a>
             </div>
         </div>
         <div class="row justify-content-center">
