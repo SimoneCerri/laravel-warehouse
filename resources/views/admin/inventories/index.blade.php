@@ -19,10 +19,8 @@
         </div>
     </header>
     <section class="py-5">
+        <a href="{{ route('admin.dashboard') }}" class="fixed-button"><i class="fa-solid fa-house"></i></a>
         <div class="container">
-            <h4 class="py-3">
-                Inventories:
-            </h4>
             <div class="table-responsive rounded-top-3">
                 <table class="table table-secondary align-middle text-center">
                     <thead class="table-dark">
