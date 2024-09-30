@@ -91,7 +91,9 @@ footer {
     }
 }
 
-.fixed-button:hover {}
+.fixed-button:hover {
+    background-color: transparent !important;
+}
 
 /*
 ###############
