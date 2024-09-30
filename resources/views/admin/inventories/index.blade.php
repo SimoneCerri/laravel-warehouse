@@ -19,7 +19,9 @@
         </div>
     </header>
     <section class="py-5">
-        <a href="{{ route('admin.dashboard') }}" class="fixed-button"><i class="fa-solid fa-house"></i></a>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-danger fixed-button">
+            <img src="/img/warehouse.png" alt="">
+        </a>
         <div class="container">
             <div class="table-responsive rounded-top-3">
                 <table class="table table-secondary align-middle text-center">
@@ -62,21 +64,21 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="modalTitleId">
-                                                            Are you sure to delete {{ $inventory->id }} inventory ?
+                                                            Are you sure to delete item with ID : {{ $inventory->id }} ?
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <div class="container-fluid">❌care❌care❌</div>
+                                                        <div class="container-fluid">❌ CARE ❌ CARE ❌</div>
                                                     </div>
-                                                    <div class="modal-footer">
+                                                    <div class="modal-footer d-flex justify-content-center">
                                                         <form action="{{ route('admin.inventories.destroy', $inventory) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-danger">
-                                                                Delete this project
+                                                                Delete item
                                                             </button>
                                                         </form>
                                                     </div>
