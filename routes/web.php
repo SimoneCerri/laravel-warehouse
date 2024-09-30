@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\InventoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
         //all route here that needs to be protected by our auth system
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+        Route::resource('/inventories', InvetoryController::class);
     });
 
 require __DIR__ . '/auth.php';
