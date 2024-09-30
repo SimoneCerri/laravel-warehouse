@@ -22,15 +22,27 @@
             </div>
         </div>
         <div class="container">
-            <div class="row bg-secondary rounded text-center">
+            <div class="row bg-secondary rounded text-center align-items-center">
                 <div class="col-4">
                     <span scope="row">{{ $inventory->id }}</span>
                 </div>
                 <div class="col-4">
                     <span scope="row">{{ $inventory->product_id }}</span>
                 </div>
-                <div class="col-4">
-                    <span scope="row">{{ $inventory->quantity }}</span>
+                <div class="col-4 d-flex justify-content-center align-items-center my-2">
+                    <form
+                        action="{{ route('admin.inventories.updateQuantity', ['inventory' => $inventory, 'action' => 'decrease']) }}"
+                        method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-danger my_quantity_button">-</button>
+                    </form>
+                    <span class="mx-2">{{ $inventory->quantity }}</span>
+                    <form
+                        action="{{ route('admin.inventories.updateQuantity', ['inventory' => $inventory, 'action' => 'increase']) }}"
+                        method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-success my_quantity_button">+</button>
+                    </form>
                 </div>
             </div>
         </div>

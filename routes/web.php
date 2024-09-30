@@ -39,6 +39,9 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('/inventories', InventoryController::class);
+
+        Route::post('/inventories/{inventory}/update-quantity/{action}', [InventoryController::class, 'updateQuantity'])
+            ->name('inventories.updateQuantity');
     });
 
 require __DIR__ . '/auth.php';

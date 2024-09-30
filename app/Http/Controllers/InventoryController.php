@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Inventory;
 use App\Http\Requests\StoreInventoryRequest;
 use App\Http\Requests\UpdateInventoryRequest;
+use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
@@ -62,5 +63,21 @@ class InventoryController extends Controller
     public function destroy(Inventory $inventory)
     {
         //
+    }
+
+    public function updateQuantity(Request $request, Inventory $inventory, $action)
+    {
+        if ($action == 'increase') {
+            $inventory->quantity += 1;
+        } elseif ($action == 'decrease') {
+            if ($inventory->quantity > 0) {
+                $inventory->quantity -= 1;
+            }
+        }
+
+        $inventory->save();
+
+        return redirect()->route('admin.inventories.show', $inventory)
+            ->with('success', 'Quantity updated successfully.');
     }
 }
